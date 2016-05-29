@@ -12,6 +12,13 @@ class ProdConfig(Config):
 
     CACHE_TYPE = 'simple'
 
+    MAIL_SERVER = "email-smtp.us-east-1.amazonaws.com"
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = "your aws username"
+    MAIL_PASSWORD = "your aws password"
+    MAIL_DEFAULT_SENDER = "your default sender mail"
+
 
 class DevConfig(Config):
     ENV = 'dev'
@@ -22,6 +29,13 @@ class DevConfig(Config):
 
     CACHE_TYPE = 'null'
     ASSETS_DEBUG = True
+
+    MAIL_SERVER = "email-smtp.us-east-1.amazonaws.com"
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = "your aws username"
+    MAIL_PASSWORD = "your aws password"
+    MAIL_DEFAULT_SENDER = "your default sender mail"
 
 
 class TestConfig(Config):
@@ -34,3 +48,10 @@ class TestConfig(Config):
 
     CACHE_TYPE = 'null'
     WTF_CSRF_ENABLED = False
+
+    MAIL_SERVER = "email-smtp.us-east-1.amazonaws.com"
+    MAIL_PORT = 587
+    MAIL_USE_TLS = True
+    MAIL_USERNAME = "your aws username"
+    MAIL_PASSWORD = "your aws password"
+    MAIL_DEFAULT_SENDER = "your default sender mail"

@@ -5,6 +5,9 @@ from web.extensions import cache
 from web.forms import LoginForm
 from web.models import User
 
+from flask_mail import Mail, Message
+from flask import current_app
+
 main = Blueprint('main', __name__)
 
 
@@ -27,6 +30,15 @@ def login():
 
     return render_template("login.html", form=form)
 
+@main.route("/lostpassword", methods=["GET", "POST"])
+def lost_password():
+    mail = Mail(current_app)
+
+    return render_template("lostpassword.html")
+
+@main.route("/resetpassword", methods=["GET", "POST"])
+def reset_password():
+    return render_template("resetpassword.html")
 
 @main.route("/logout")
 def logout():
