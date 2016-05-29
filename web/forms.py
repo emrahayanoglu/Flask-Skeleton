@@ -28,3 +28,10 @@ class LoginForm(Form):
             return False
 
         return True
+
+class ResetForm(Form):
+    password = PasswordField(u'Password', validators=[validators.required()])
+    repassword = PasswordField(u'Retype Password', validators=[validators.required()])
+
+class LostPasswordForm(Form):
+    email = TextField(u'E-mail', validators=[validators.Email()])

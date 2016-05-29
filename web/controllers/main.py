@@ -32,12 +32,18 @@ def login():
 
 @main.route("/lostpassword", methods=["GET", "POST"])
 def lost_password():
-    mail = Mail(current_app)
+    form = LostPasswordForm()
+    if form.validate_on_submit():
+        mail = Mail(current_app)
 
     return render_template("lostpassword.html")
 
 @main.route("/resetpassword", methods=["GET", "POST"])
 def reset_password():
+    form = ResetForm()
+    if form.validate_on_submit():
+        return redirect(url_for(".login"))
+
     return render_template("resetpassword.html")
 
 @main.route("/logout")
