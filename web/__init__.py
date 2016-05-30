@@ -6,6 +6,7 @@ from webassets.loaders import PythonLoader as PythonAssetsLoader
 from web import assets
 from web.models import db
 from web.controllers.main import main
+from web.controllers.member import member
 
 from web.extensions import (
     mail,
@@ -55,5 +56,6 @@ def create_app(object_name):
 
     # register our blueprints
     app.register_blueprint(main)
+    app.register_blueprint(member)
 
     return app
