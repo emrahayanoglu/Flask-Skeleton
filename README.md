@@ -1,6 +1,6 @@
 #Flask Skeleton
 
-It is developed by improving Flask-Foundation <https://github.com/JackStouffer/Flask-Foundation> project with new libraries and integrations.
+It is developed by integrating new libraries to Flask-Foundation <https://github.com/JackStouffer/Flask-Foundation> project.
 
 New Libraries:
 
