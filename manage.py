@@ -3,6 +3,7 @@
 import os
 
 from flask.ext.script import Manager, Server
+from flask.ext.migrate import Migrate, MigrateCommand
 from flask.ext.script.commands import ShowUrls, Clean
 from web import create_app
 from web.models import db, User
@@ -11,12 +12,13 @@ from web.models import db, User
 # production anyway
 env = os.environ.get('APPNAME_ENV', 'dev')
 app = create_app('web.settings.%sConfig' % env.capitalize())
+migrate = Migrate(app, db)
 
 manager = Manager(app)
 manager.add_command("server", Server())
 manager.add_command("show-urls", ShowUrls())
 manager.add_command("clean", Clean())
-
+manager.add_command("db", MigrateCommand)
 
 @manager.shell
 def make_shell_context():
