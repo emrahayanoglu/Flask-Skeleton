@@ -8,6 +8,7 @@ from web.models import db
 from web.controllers.main import main
 
 from web.extensions import (
+    mail,
     cache,
     celery,
     assets_env,
@@ -42,6 +43,8 @@ def create_app(object_name):
     login_manager.init_app(app)
 
     celery.init_app(app)
+
+    mail.init_app(app)
 
 
     # Import and register the different asset bundles

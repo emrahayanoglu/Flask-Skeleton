@@ -1,11 +1,11 @@
 from flask import Blueprint, render_template, flash, request, redirect, url_for
 from flask.ext.login import login_user, logout_user, login_required
 
-from web.extensions import cache
+from web.extensions import cache, mail
 from web.forms import LoginForm
 from web.models import User
 
-from flask_mail import Mail, Message
+from flask_mail import Message
 from flask import current_app
 
 main = Blueprint('main', __name__)
@@ -34,8 +34,8 @@ def login():
 def lost_password():
     form = LostPasswordForm()
     if form.validate_on_submit():
-        mail = Mail(current_app)
-
+        # mail = Mail(current_app)
+        pass
     return render_template("lostpassword.html")
 
 @main.route("/resetpassword", methods=["GET", "POST"])
