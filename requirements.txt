@@ -10,6 +10,7 @@ Flask-Script==2.0.5
 Flask-WTF==0.11
 Flask-Mail==0.9.1
 Flask-Migrate==1.8.0
+Flask-Celery-Helper==1.1.0
 
 # Other
 itsdangerous==0.24

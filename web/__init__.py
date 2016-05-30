@@ -9,6 +9,7 @@ from web.controllers.main import main
 
 from web.extensions import (
     cache,
+    celery,
     assets_env,
     debug_toolbar,
     login_manager
@@ -39,6 +40,9 @@ def create_app(object_name):
     db.init_app(app)
 
     login_manager.init_app(app)
+
+    celery.init_app(app)
+
 
     # Import and register the different asset bundles
     assets_env.init_app(app)

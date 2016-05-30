@@ -19,6 +19,9 @@ class ProdConfig(Config):
     MAIL_PASSWORD = "your aws password"
     MAIL_DEFAULT_SENDER = "your default sender mail"
 
+    CELERY_BROKER_URL = "redis://localhost"
+    CELERY_RESULT_BACKEND = "redis://localhost"
+
 
 class DevConfig(Config):
     ENV = 'dev'
@@ -37,6 +40,8 @@ class DevConfig(Config):
     MAIL_PASSWORD = "your aws password"
     MAIL_DEFAULT_SENDER = "your default sender mail"
 
+    CELERY_BROKER_URL = "redis://localhost"
+    CELERY_RESULT_BACKEND = "redis://localhost"
 
 class TestConfig(Config):
     ENV = 'test'
@@ -55,3 +60,6 @@ class TestConfig(Config):
     MAIL_USERNAME = "your aws username"
     MAIL_PASSWORD = "your aws password"
     MAIL_DEFAULT_SENDER = "your default sender mail"
+
+    CELERY_BROKER_URL = "redis://localhost"
+    CELERY_RESULT_BACKEND = "redis://localhost"
