@@ -34,6 +34,11 @@ docs/_build
 env
 env*
 
+# Rope Project
+.ropeproject
+*.swo
+*.swp
+
 .webassets-cache
 .DS_Store
 *.sublime-*
