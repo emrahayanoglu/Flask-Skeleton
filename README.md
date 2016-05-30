@@ -11,6 +11,6 @@ New Libraries:
 
 ## License
 
-Flask-Foundation is licensed under the MIT license. For more info see LICENSE
+Flask-Skelaton is licensed under the MIT license. For more info see LICENSE
 
 
