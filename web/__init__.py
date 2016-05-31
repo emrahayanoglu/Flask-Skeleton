@@ -10,6 +10,7 @@ from web.controllers.member import member
 
 from web.extensions import (
     mail,
+    babel,
     cache,
     celery,
     assets_env,
@@ -41,11 +42,17 @@ def create_app(object_name):
     # initialize SQLAlchemy
     db.init_app(app)
 
+    # initialize login manager
     login_manager.init_app(app)
 
+    # initialize celery
     celery.init_app(app)
 
+    #initialize mail
     mail.init_app(app)
+
+    #initialize babel
+    babel.init_app(app)
 
 
     # Import and register the different asset bundles

@@ -7,10 +7,10 @@ New Libraries:
 * Flask-Mail
 * Flask-Celery-Helper
 * Flask-Migrate
+* Flask-Babel
 
+more to come...
 
 ## License
 
 Flask-Skeleton is licensed under the MIT license. For more info see LICENSE
-
-

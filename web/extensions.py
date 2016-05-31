@@ -2,6 +2,7 @@ from flask.ext.cache import Cache
 from flask.ext.debugtoolbar import DebugToolbarExtension
 from flask.ext.login import LoginManager
 from flask.ext.celery import Celery
+from flask.ext.babel import Babel
 from flask_assets import Environment
 from flask_mail import Mail
 
@@ -15,6 +16,9 @@ celery = Celery()
 
 # Setup Mail
 mail = Mail()
+
+# Setup Babel
+babel = Babel()
 
 # init flask assets
 assets_env = Environment()

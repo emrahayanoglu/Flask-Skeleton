@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, flash, request, redirect, url_for
 from flask.ext.login import login_user, logout_user, login_required
+from flask.ext.babel import gettext, ngettext
 
 from web.extensions import cache, mail
 from web.forms import LoginForm
@@ -49,7 +50,7 @@ def reset_password():
 @main.route("/logout")
 def logout():
     logout_user()
-    flash("You have been logged out.", "success")
+    flash(gettext("You have been logged out."), "success")
 
     return redirect(url_for(".home"))
 
@@ -57,4 +58,4 @@ def logout():
 @main.route("/restricted")
 @login_required
 def restricted():
-    return "You can only see this if you are logged in!", 200
+    return gettext("You can only see this if you are logged in!"), 200

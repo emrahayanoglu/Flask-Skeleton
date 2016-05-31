@@ -22,6 +22,9 @@ class ProdConfig(Config):
     CELERY_BROKER_URL = "redis://localhost"
     CELERY_RESULT_BACKEND = "redis://localhost"
 
+    BABEL_DEFAULT_LOCALE = "en"
+    BABEL_DEFAULT_TIMEZONE = "UTC"
+
 
 class DevConfig(Config):
     ENV = 'dev'
@@ -43,6 +46,9 @@ class DevConfig(Config):
     CELERY_BROKER_URL = "redis://localhost"
     CELERY_RESULT_BACKEND = "redis://localhost"
 
+    BABEL_DEFAULT_LOCALE = "en"
+    BABEL_DEFAULT_TIMEZONE = "UTC"
+
 class TestConfig(Config):
     ENV = 'test'
     DEBUG = True
@@ -63,3 +69,6 @@ class TestConfig(Config):
 
     CELERY_BROKER_URL = "redis://localhost"
     CELERY_RESULT_BACKEND = "redis://localhost"
+
+    BABEL_DEFAULT_LOCALE = "en"
+    BABEL_DEFAULT_TIMEZONE = "UTC"

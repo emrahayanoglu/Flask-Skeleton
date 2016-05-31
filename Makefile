@@ -25,3 +25,14 @@ lint:
 
 test:
 	py.test tests
+
+initi18n:
+	pybabel extract -F babel.cfg -o messages.pot web
+	pybabel init -i messages.pot -d web/translations -l ${LANGUAGE}
+
+updatei18n:
+	pybabel extract -F babel.cfg -o messages.pot web
+	pybabel update -i messages.pot -d web/translations -l ${LANGUAGE}
+
+compilei18n:
+	pybabel compile -d web/translations
