@@ -8,8 +8,13 @@ New Libraries:
 * Flask-Celery-Helper
 * Flask-Migrate
 * Flask-Babel
+* Flask-Security (*)
+* Flask-Social (*)
+* Flask-Restful (*)
 
 more to come...
+
+* on Going Integration  
 
 ## License
 
