@@ -8,6 +8,8 @@ from web.models import db
 from web.controllers.main import main
 from web.controllers.member import member
 
+from web.controllers.restservice import restservice
+
 from web.extensions import (
     mail,
     babel,
@@ -64,5 +66,6 @@ def create_app(object_name):
     # register our blueprints
     app.register_blueprint(main)
     app.register_blueprint(member)
+    app.register_blueprint(restservice)
 
     return app

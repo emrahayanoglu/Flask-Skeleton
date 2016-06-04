@@ -14,6 +14,7 @@ Flask-Celery-Helper
 Flask-Babel
 Flask-Social
 Flask-Security
+Flask-Restful
 
 # Other
 itsdangerous==0.24

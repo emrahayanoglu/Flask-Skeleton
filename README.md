@@ -8,9 +8,9 @@ New Libraries:
 * Flask-Celery-Helper
 * Flask-Migrate
 * Flask-Babel
+* Flask-Restful
 * Flask-Security (*)
 * Flask-Social (*)
-* Flask-Restful (*)
 
 more to come...
 

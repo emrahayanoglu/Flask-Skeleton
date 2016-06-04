@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, flash, request, redirect, url_for
-from flask.ext.login import login_user, logout_user, login_required
-from flask.ext.babel import gettext, ngettext
+from flask_login import login_user, logout_user, login_required
+from flask_babel import gettext, ngettext
 
 from web.extensions import cache, mail
 from web.forms import LoginForm
