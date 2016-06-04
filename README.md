@@ -14,7 +14,7 @@ New Libraries:
 
 more to come...
 
-* on Going Integration  
+* ongoing integration  
 
 ## License
 
